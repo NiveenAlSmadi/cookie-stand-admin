@@ -8,7 +8,19 @@ Your job is to create a Cookie Stand Admin app using Next.js and style using Tai
 
 - Finish time: 7:30 pm
 
+----------------------------------------------------------------------------------------------
+# LAB 38: Cookie Stand Admin Version 2
+Author: Niveen ALsmadi Version: 1.0.0
+
+## Problem Domain: 
+Your job is to continue work on Cookie Stand Admin app using Next.js and style using Tailwind CSS.
+
+- starting time: 5:30 pm
+
+- Finish time:10pm
+
 ## Links:
 Deployment:[REACT app](https://cookie-stand-admin-39y09wfl8-niveen.vercel.app/)
+PR:[react2]()
 
 
