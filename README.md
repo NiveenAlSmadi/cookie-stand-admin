@@ -20,7 +20,9 @@ Your job is to continue work on Cookie Stand Admin app using Next.js and style u
 - Finish time:10pm
 
 ## Links:
-Deployment:[REACT app](https://cookie-stand-admin-39y09wfl8-niveen.vercel.app/)
-PR:[react2]()
+
+1) Deployment:[REACT app](https://cookie-stand-admin-39y09wfl8-niveen.vercel.app/)
+
+2) PR:[react2](https://github.com/NiveenAlSmadi/cookie-stand-admin/pull/1)
 
 
