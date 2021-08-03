@@ -6,8 +6,8 @@ export default function Table(props){
         {
               (props.nlocation.length === 0)?<p class="font-mono text-black-500">No Cookie Stand Available</p>:
               <table className="w=1/2 mx-auto my-4 text-m ">
-              <thead className=" bg-green-500 ">
-                <tr>
+              <thead className=" bg-green-500 rounded-md ">
+                <tr className=" bg-green-500 rounded-md ">
                   <th className=" bg-green-500">Location</th>
                     {
                     props.time.map(item =>{
