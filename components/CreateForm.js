@@ -1,32 +1,38 @@
 
 export default function CookieForm(props) {
     return (
-        <div className="bg-green-300 rounded">
+        <div className="bg-green-200 border border-green-500 rounded">
 
-        <legend className=" mb-4 text-center">
-              <h2 className=" m-10 font-medium text-2xl ">Create Cookie Stand  </h2>
+        <legend className=" mb-4 text-center m-10">
+              
             
         
  
-          <form className="flex flex-wrap mx-2" onSubmit={props.CookieHandler}>
-               <label className=" w-full my-5  ">Location 
-               <input className=" w-11/12 mx-1"name="location" />
+          <form className="flex flex-wrap mx-2 " onSubmit={props.CookieHandler}>
+               <label className="my-2 text-sm font-semibold ">ADD LOCATION <br></br>
+               </label>
+               <input className=" w-3/5 mx-1 h-8"name="location"  placeholder="Cookie Stand Location"/>
+             
+
+               <label className="w-3/12 mx-11 text-sm font-semibold" >MINIMUM CUSTOMERS PER HOUR 
+               <input className="px-5 " type="number" name="min" placeholder="0" />
                </label>
  
-               <label className="w-3/12" >Minimum Customers per Hour
-               <input className="px-5 " type="number" name="min" />
+ 
+               <label className="w-3/12 text-sm  mx-11 font-semibold" >MAXIMUM CUSTOMERS PER HOUR 
+               <input className=" px-5 " type="number"name="max" placeholder="0"/>
                </label>
  
- 
-               <label className="w-3/12" >Maximum Customers per Hour
-               <input className=" px-5 " type="number"name="max" />
+               <label className="w-3/12 text-sm font-semibold" >AVERAGE COOKIE PER SALE
+               <input className="px-5 " name="avg" placeholder="0"></input>
                </label>
+               
+          
  
-               <label className="w-3/12" >Average Cookie per Sale 
-               <input className="px-5 " name="avg"></input>
-               </label>
- 
-               <input className=" bg-green-500 w-3/12 text-center" type="submit" value="Create" />
+
+               <button className=" bg-green-500 text-xs w-3/12 rounded-md h-5 mt-5" > CREATE STAND </button>
+               
+              
              </form>
  
           </legend>

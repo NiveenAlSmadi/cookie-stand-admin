@@ -1,63 +1,32 @@
-import Head from 'next/head'
-import { useState } from 'react'
-import Header from '../components/header'
-import Footer from '../components/footer'
-import CookieForm from '../components/CreateForm'
-import ReportTable from '../components/ReportTable'
-import { time } from '../data'
+import CookieStandAdmin from '../components/CookieStandAdmin'
+import LoginForm from '../components/login-form';
+import { useState } from "react";
+import axios from 'axios';
 
-export default function Home() {
 
-  const [nlocation, setLocation] = useState([])
+const baseUrl = 'https://cookie-stand-api.herokuapp.com';
+const tokenUrl = baseUrl + '/api/token/';
+const refreshToken = baseUrl + '/api/token/refresh/';
 
-  const [totals, setTotals] = useState([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]);
-  
-  function storInArray(max, min, avg){
-    let array = [];
-    array[15] = 0;
-    for (let i = 0 ; i < 15; i++ ){
-      let rand = Math.floor(Math.random() * (max - min + 1) + min);
-      let numOfCookies = Math.floor(avg * rand);
-      array[i] = numOfCookies;
-      array[15] += array[i];
-      totals[i]+= array[i]
-      
-      
-      
-    }
-    totals[15] += array[15]
-    return array;
+export default function Home(props){
+  const [token, setToken] = useState('');
+  const [refreshToken, setRefreshToken] = useState('');
+
+
+  async function getToken(credentials){
+    const fetchedToken = await axios.post(tokenUrl, credentials);
+    setToken(fetchedToken.data.access);
+    setRefreshToken(fetchedToken.data.refresh);
   }
 
-  function CookieHandler(event){
-    event.preventDefault();
-    let Data = storInArray(parseInt(event.target.max.value), parseInt(event.target.min.value), parseInt(event.target.avg.value))
-    const result= {
-      location: event.target.location.value,
-      minCustomers:event.target.min.value ,
-      maxCustomers:event.target.max.value ,
-      avgCookie:event.target.avg.value,
-      randCookPerHour: Data
-    }
-   setLocation([...nlocation,result])
+
+  function loginHandler(credentials){
+    getToken(credentials);
   }
 
-  return (
-    <div className="">
-      <Head>
-        <title>Cookie Stand Admin</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+  if (!token) return <LoginForm loginHandler={loginHandler}/>
+  return(
+    <CookieStandAdmin token={token}/>
+  );
 
-      <Header/>
-
-    <main className=" m-10 flex  flex-col justify-center ">
-
-      <CookieForm CookieHandler={CookieHandler}/>
-      <ReportTable time={time} nlocation={nlocation} totals={totals}/>
-    </main>
-
-     <Footer nlocation={nlocation}/>
-    </div>
-  )
 }

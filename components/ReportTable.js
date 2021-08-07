@@ -1,4 +1,4 @@
-
+import { BsTrash } from "react-icons/bs";
 export default function Table(props){
     return(
         <div className="flex flex-col text-center">
@@ -25,12 +25,12 @@ export default function Table(props){
                   props.nlocation.map(item => {
                     return(
                       <tr className="bg-green-200 " >
-                        <td className="border border-black-600">{item.location}</td>
+                        <td className=" flex flex-row items-center  justify-between border border-black-600">{item.location}<BsTrash/> </td>
                         {
                             item.randCookPerHour.map(ele =>{
                                  
-                                return(
-                                    <td className="border border-black-600">{ele}</td>
+                                return(   
+                                    <td className=" border border-black-600"> {ele}</td>
                                 )
                             })
                         }
