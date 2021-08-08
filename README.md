@@ -35,4 +35,13 @@ not finished
 
 2) PR:[react2](https://github.com/NiveenAlSmadi/cookie-stand-admin/pull/2)
 
+----------------------------------------------------------------------------------------------
+# LAB 40: Cookie Stand Admin Version 4
+Author: Niveen ALsmadi Version: 1.0.0
+Deployed since day 1
 
+## Links:
+
+1) Deployment:[REACT app](https://cookie-stand-admin-39y09wfl8-niveen.vercel.app/)
+
+2) PR:[react2](https://github.com/NiveenAlSmadi/cookie-stand-admin/pull/3)
