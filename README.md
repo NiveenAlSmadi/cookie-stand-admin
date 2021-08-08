@@ -33,7 +33,7 @@ not finished
 
 1) Deployment:[REACT app](https://cookie-stand-admin-39y09wfl8-niveen.vercel.app/)
 
-2) PR:[react2](https://github.com/NiveenAlSmadi/cookie-stand-admin/pull/2)
+2) PR: [react3](https://github.com/NiveenAlSmadi/cookie-stand-admin/pull/2)
 
 ----------------------------------------------------------------------------------------------
 # LAB 40: Cookie Stand Admin Version 4
@@ -44,4 +44,4 @@ Deployed since day 1
 
 1) Deployment:[REACT app](https://cookie-stand-admin-39y09wfl8-niveen.vercel.app/)
 
-2) PR:[react2](https://github.com/NiveenAlSmadi/cookie-stand-admin/pull/3)
+2) PR: [react4](https://github.com/NiveenAlSmadi/cookie-stand-admin/pull/3)
