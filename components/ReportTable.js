@@ -9,7 +9,8 @@ export default function Table(props){
               <thead className=" bg-green-500 rounded-md ">
                 <tr className=" bg-green-500 rounded-md ">
                   <th className=" bg-green-500">Location</th>
-                    {
+                    
+                  {
                     props.time.map(item =>{
                         return(
                             <th className="p-2">{item}</th>
